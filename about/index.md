@@ -1,6 +1,6 @@
 ---
 title: "关于我"
-date: 2018-12-19T15:03:32+08:00
+date: 2020-04-02T15:03:32+08:00
 # categories: ["关于我"]
 # tags: ["关于我"]
 hiddenFromHomePage: true
@@ -8,7 +8,9 @@ draft: false
 ---
 
 <style>
-table thead, footer {
+table thead,
+footer,
+.post-meta.meta-tags {
     display: none;
 }
 table td {
@@ -35,8 +37,8 @@ table td {
 
 # 教育经历
 院校: 吕梁学院  
-时间: 2012.09-2016.06
-学历: 统招本科
+时间: 2012.09-2016.06  
+学历: 统招本科  
 
 # 工作经历
 
