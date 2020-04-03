@@ -74,7 +74,7 @@ alarm: 公司统一报警平台,主要功能是发送线上各种报警给相关
 
 ### 2015.11-2018.06
 主要从事一些后台管理系统的开发工作,工作的主要内容是CRUD,参与了几个后台系统的开发,主要技术栈是SpringBoot+Hibernate+Bootstrap3  
-期间由于需要还参与了公司app的开发工作,主要技术栈是AngularJS+ionic,hybrid技术.  
+期间由于需要还参与了公司app的开发工作,主要技术栈是AngularJS+ionic,Hybrid技术.  
 还因为在工作中用到FreeSWITCH,对FreeSWITCH也有简单的使用.
 
 
