@@ -17,7 +17,8 @@ table td {
     width: 25%;
 }
 .post-content h2,
-.post-content h3 {
+.post-content h3,
+.post-content h4 {
     color: #444444
 }
 </style>
