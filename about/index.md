@@ -25,7 +25,7 @@ table td {
     width: 100%;
 }
 #secondary {
-    dispaly: none;
+    display: none;
 }
 
 </style>
