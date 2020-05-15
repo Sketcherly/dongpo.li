@@ -2,7 +2,7 @@
 title: "Tomcat的性能与最大并发(1000)"
 date: 2016-10-15T15:03:32+08:00
 tags: ["文章推荐"]
-draft: false
+draft: true
 ---
 
 
@@ -11,8 +11,6 @@ draft: false
 # 一. 正文
 
 1. [Tomcat的性能与最大并发(1000)](http://blog.chinaunix.net/uid-7374279-id-4470247.html)
-
-> 读者注意：线程是一个比进程大的单位，文章中有些说法是错误的。
 
 
 # 二. 说明
