@@ -52,7 +52,7 @@ table td {
 
 ## 北京十一贝科技有限公司
 
-### 2018.06-至今
+### 2018.06-2020.05
 主要参与公司基础组件的运维工作,ES集群, 加解密平台, sms_center, qmq,es-adapter, appcenter, ip_resolve, app_push, qconfig, qschedule, alarm, qmonitor, service_manager, app_push  
 
 ES集群: 目前3个集群,25台物理机共800核3200G内存,20+T数据,目前主要负责集群日常的维护和管理,曾设计和实施了ES实例的部署由人工到半自动化的改造、ES权限校验插件的改造
