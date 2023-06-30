@@ -74,7 +74,8 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
+    # Title: "Hi there \U0001F44B"
+    Title: "Sketcherly"
     Content: "少壮不努力，老大做IT！！"
 
   socialIcons:
