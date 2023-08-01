@@ -1,0 +1,87 @@
+---
+title: "0、安装操作系统"
+date: 2023-08-01T10:52:08+08:00
+draft: false
+---
+
+# 安装PVE8.0
+
+## 下载镜像
+PVE官网 https://www.proxmox.com/en/downloads  
+下载 Proxmox VE 8.0 ISO Installer  当前最新版本  
+
+
+## 制作启动盘
+使用任意U盘启动制作工具，将下载的ISO文件写入U盘制作成启动盘  
+这里习惯使用UltraISO软碟通，先打开刚下载的ISO文件，然后启动-写入硬盘影映像  
+格式选raw（应该是默认）  
+注意：制作启动盘需要格式化U盘，所以U盘上的数据注意备份。  
+重启电脑，从U盘启动，开始安装
+这里有个坑，刚做完启动盘重启进Bios进不去，黑屏卡死，关机再开机就好了。  
+
+
+## 安装系统
+估计是英特尔独显的问题，怎么都进不去图形安装界面（Graphical），只能用命令行（Console）形式安装，好在也是命令行形式渲染的界面，装过debain的话应该不陌生，也挺傻瓜式的，流程也不长，不能截图就不贴图了，需要的话下次重装再详细记录。  
+
+## 修改软件源
+默认的软件源是商业源，需要订阅，这里我们改成免费源
+
+``` shell
+apt update
+apt install vim
+```
+
+``` shell
+apt install apt-transport-https ca-certificates
+cp -rp /etc/apt/sources.list /etc/apt/sources.list.bak
+vim /etc/apt/sources.list
+```
+
+修改为如下内容
+``` text
+# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware
+
+# deb https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
+# # deb-src https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
+```
+
+``` shell
+cp -rp /etc/apt/sources.list.d/pve-enterprise.list /etc/apt/sources.list.d/pve-enterprise.list.bak
+vim /etc/apt/sources.list.d/pve-enterprise.list
+
+wget https://enterprise.proxmox.com/debian/proxmox-release-bookworm.gpg -O /etc/apt/trusted.gpg.d/proxmox-release-bookworm.gpg
+```
+
+修改为如下内容
+``` text
+deb https://mirrors.tuna.tsinghua.edu.cn/proxmox/debian/pve bookworm pve-no-subscription
+```
+
+
+修复更新时源报401错
+``` shell
+cp -rp /etc/apt/sources.list.d/ceph.list /etc/apt/sources.list.d/ceph.list.bak
+vim /etc/apt/sources.list.d/ceph.list
+```
+修改文件内容如下
+``` text
+deb http://download.proxmox.com/debian/ceph-quincy bookworm no-subscription
+```
+
+``` shell
+wget https://enterprise.proxmox.com/debian/proxmox-release-bookworm.gpg -O /etc/apt/trusted.gpg.d/proxmox-release-bookworm.gpg
+apt update && apt dist-upgrade
+```
+
+
