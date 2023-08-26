@@ -59,8 +59,6 @@ deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main 
 ``` shell
 cp -rp /etc/apt/sources.list.d/pve-enterprise.list /etc/apt/sources.list.d/pve-enterprise.list.bak
 vim /etc/apt/sources.list.d/pve-enterprise.list
-
-wget https://enterprise.proxmox.com/debian/proxmox-release-bookworm.gpg -O /etc/apt/trusted.gpg.d/proxmox-release-bookworm.gpg
 ```
 
 修改为如下内容
@@ -83,5 +81,20 @@ deb http://download.proxmox.com/debian/ceph-quincy bookworm no-subscription
 wget https://enterprise.proxmox.com/debian/proxmox-release-bookworm.gpg -O /etc/apt/trusted.gpg.d/proxmox-release-bookworm.gpg
 apt update && apt dist-upgrade
 ```
+
+# 创建常用账户
+
+
+useradd -m -s /bin/bash sketcherly
+cd /home/sketcherly
+mkdir .ssh
+chmod 700 .ssh
+cd .ssh
+cp /root/.ssh/id_rsa* .
+touch authorized_keys
+cat /root/.ssd/authorized_keys >> authorized_keys
+chown sketcherly:sketcherly .ssh
+
+
 
 

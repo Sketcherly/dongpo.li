@@ -1,0 +1,49 @@
+---
+title: "3、内网穿透"
+date: 2023-08-01T10:32:08+08:00
+draft: false
+---
+
+
+``` shell
+
+```
+
+``` text
+[common]
+server_addr = ***.***.***.***
+server_port = 7000
+
+token = ****************
+
+[sketcherly_ssh]
+type = tcp
+local_ip = 127.0.0.1
+local_port = 22
+remote_port = 10000
+
+[sketcherly_web]
+type = tcp
+local_ip = 127.0.0.1
+local_port = 8006
+remote_port = 8006
+```
+
+
+touch /etc/systemd/system/frps.service
+vim /etc/systemd/system/frps.service
+``` text
+[Unit]
+# 服务名称，可自定义
+Description = frp server
+After = network.target syslog.target
+Wants = network.target
+
+[Service]
+Type = simple
+# 启动frps的命令，需修改为您的frps的安装路径
+ExecStart = /opt/frp_0.51.2_linux_amd64/frpc -c /opt/frp_0.51.2_linux_amd64/frpc.ini
+
+[Install]
+WantedBy = multi-user.target
+```

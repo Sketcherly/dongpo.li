@@ -1,0 +1,89 @@
+---
+title: "7、安装网盘"
+date: 2023-08-01T10:32:08+08:00
+draft: false
+---
+
+# 创建用户组
+
+groupadd sftp_users
+
+
+# 创建用户
+``` bash
+# cloudreve的运行账户
+useradd -M -g sftp_users -s /usr/sbin/nologin user0
+# sftp账户
+useradd -M -g sftp_users -s /usr/sbin/nologin user1
+```
+
+# 恢复cloudreve
+``` bash
+cp -rp /data/master.backup/cloudreve_3.8.2_linux_amd64* /opt/
+cp -rp /data/master.backup/cloudreve.service /etc/systemd/system/
+```
+
+# 修改各路径权限
+``` bash
+chown user0:sftp_users -R /opt/cloudreve_3.8.2_linux_amd64
+chown user0:sftp_users -R /data/user0
+chown user1:sftp_users -R /data/user1
+```
+
+# 查看密码
+``` bash
+cd /opt/cloudreve_3.8.2_linux_amd64/
+./cloudreve -c conf.ini
+```
+
+记下控制台输出的账号密码,就可以停止了
+
+然后执行
+chown user0:sftp_users -R /opt/cloudreve_3.8.2_linux_amd64
+
+
+
+
+
+# 启动cloudreve
+``` bash
+systemctl enable cloudreve
+systemctl start cloudreve
+systemctl status cloudreve
+```
+
+# 设置云盘
+
+## 关闭注册
+注册与登录
+
+## 关闭缓存(减少内存占用)
+图像与预览
+
+## 账号密码
+用户
+
+## 修改存储限制
+用户组
+
+
+## 存储策略
+/data/user{uid}/Root
+
+
+## webdav
+
+
+# 导入数据
+先删除缩略图
+
+find /data/user1/Root -name '*._thumb' -type f | xargs rm -rf
+
+
+
+
+# 开启aria2
+先不开启了
+
+# 开启sftp
+暂时好像没啥用,先不开启了
