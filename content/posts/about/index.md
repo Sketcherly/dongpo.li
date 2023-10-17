@@ -38,6 +38,7 @@ SpringBoot
 SpringCloud
 Hibernate  
 MyBatis  
+Caffeine  
 Elasticsearch  
 MySQL  
 Dubbo  
@@ -63,7 +64,7 @@ AngularJS
 
 
 技术栈  
-spring-boot, spring-cloud, MySQL8, MyBatis, Redis, RocketMQ
+spring-boot, spring-cloud, MySQL8, MyBatis, Redis, RocketMQ, Caffeine
 
 ## 北京十一贝科技有限公司
 
