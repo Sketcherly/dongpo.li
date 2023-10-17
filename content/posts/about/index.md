@@ -7,29 +7,6 @@ hiddenFromHomePage: true
 draft: false
 ---
 
-<style>
-table thead,
-footer,
-.post-meta.meta-tags {
-    display: none;
-}
-table td {
-    width: 25%;
-}
-.post-content h2,
-.post-content h3,
-.post-content h4 {
-    color: #444444
-}
-#main {
-    width: 100%;
-}
-#secondary {
-    display: none;
-}
-
-</style>
-
 找工作了,简历附上
 <!--more-->
 
@@ -41,7 +18,7 @@ table td {
 | 民族 | 汉 | 籍贯 | 山西省临汾市 |
 | 学历 | 本科 | 婚姻状况 | 未婚 |
 | 毕业学校 | 吕梁学院 | 专业 | 计算机科学与技术 |
-| 联系电话 | <a href="tel:13828172679">18834233243</a> | 邮箱 | dongpo.li@hotmail.com |
+| 联系电话 | <a href="tel:18834233243">18834233243</a> | 邮箱 | dongpo.li@hotmail.com |
 
 # 教育经历
 院校: 吕梁学院  
@@ -50,9 +27,24 @@ table td {
 
 # 工作经历
 
+## 北京小卒科技有限公司
+
+### 2020.06-2023.10
+主要负责公司网赚小程序矩阵的后端服务开发,架构设计,服务维护,线上问题排查等工作
+
+用户模块: 参与了用户模块的服务化拆分,将原来单体的用户功能服务化,提供给多个项目使用,方便统一管理和维护.  
+网赚模块-任务: 主导开发了营销推广类任务墙功能,支持集合多种类型的自有和第三方广告集成在一个任务列表里使用同样的逻辑完成任务发放奖励.  
+网赚模块-其他: 维护并迭代了网赚项目的其他模块.
+基础组件: 主导搭建并维护了公司的部分基础组件,包括日志中心(EFK),配置中心(spring-cloud-config),监控中心(grafana&metric-meter),调度中心等.  
+运维相关: 参与了公司的运维工作,包括服务器的挑选,部署,维护等(阿里云),尝试过成功将服务器开支压缩20%.  
+
+
+技术栈  
+spring-boot, spring-cloud, MySQL8, MyBatis, Redis, RocketMQ
+
 ## 北京十一贝科技有限公司
 
-### 2018.06-2020.05
+### 2018.06-2020.06
 主要参与公司基础组件的运维工作,ES集群, 加解密平台, sms_center, qmq,es-adapter, appcenter, ip_resolve, app_push, qconfig, qschedule, alarm, qmonitor, service_manager, app_push  
 
 ES集群: 目前3个集群,25台物理机共800核3200G内存,20+T数据,目前主要负责集群日常的维护和管理,曾设计和实施了ES实例的部署由人工到半自动化的改造、ES权限校验插件的改造
