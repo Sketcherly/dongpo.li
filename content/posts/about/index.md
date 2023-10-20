@@ -26,6 +26,10 @@ draft: false
 学历: 统招本科  
 
 
+　  
+　  
+　  
+
 # 专业技能
 主要从事基于spring全家桶的后端服务开发工作,可以根据业务需求进行功能和架构设计.  
 曾从事基础组件的维护工作,对于基础组件和基础服务(分布式配置、分布式定时任务等)有一定的理解,有一定的线上问题排查能力.  
@@ -38,6 +42,7 @@ SpringBoot
 SpringCloud
 Hibernate  
 MyBatis  
+K8S
 Caffeine  
 Elasticsearch  
 MySQL  
