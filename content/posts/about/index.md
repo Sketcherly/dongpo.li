@@ -38,8 +38,8 @@ draft: false
 还是常规的罗列技术术语的部分:  
 Java  
 Spring  
-SpringBoot
-SpringCloud
+SpringBoot  
+SpringCloud  
 Hibernate  
 MyBatis  
 K8S  
