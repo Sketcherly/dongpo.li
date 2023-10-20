@@ -48,8 +48,8 @@ Elasticsearch
 MySQL  
 Dubbo  
 Redis  
-RocketMQ
-Bootstrap
+RocketMQ  
+Bootstrap  
 JQuery  
 AngularJS  
 
