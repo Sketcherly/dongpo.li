@@ -70,7 +70,7 @@ AngularJS
 技术栈  
 spring-boot， spring-cloud， MySQL8， MyBatis， Redis， RocketMQ， Caffeine， K8S  
 
-工作成果
+工作成果  
 1、实现将公司的日志组件由云服务改为自建，成本节省50%。  
 2、 实现了公司监控和报警服务从0到1的建设。  
 3、 尝试过成功将服务器开支压缩20%。  
