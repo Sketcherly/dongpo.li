@@ -1,7 +1,7 @@
 ---
-title: "3、制作虚拟机模板"
+title: "7、制作虚拟机模板"
 date: 2023-08-01T10:32:08+08:00
-draft: false
+draft: true
 ---
 
 # 安装
