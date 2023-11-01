@@ -47,13 +47,15 @@ draft: false
 
 # 专业技能
 
-多年专注于Java后端开发，具有丰富的开发经验和技能。我的工作中注重架构设计和服务开发，以确保高效、可维护的应用程序。我追求技术的钻研和创新，致力于提供高质量的解决方案。
+多年专注于Java后端开发，具有丰富的开发经验和技能。工作中注重架构设计和服务开发，以确保高效、可维护的应用程序。我追求技术的钻研和创新，致力于提供高质量的解决方案。  
+熟悉各种主流开发框架,熟悉高并发和分布式开发,熟练掌握常用的数据结构,熟悉常用的设计模式和开发规范.
 
-- **后端开发:** Java基础扎实, 熟练掌握Spring, Spring Boot, Spring Cloud, Hibernate, MyBatis等开源组件, 可以编写简单的spring-boot-starter方便组件使用
+- **后端开发:** Java基础扎实, 熟练掌握Spring, Spring Boot, Spring Cloud, Hibernate, MyBatis, Dubbo等开源组件, 可以编写简单的spring-boot-starter方便组件使用
 - **数据库:** MySQL, Redis, Elasticsearch
-- **消息中间件:** RocketMQ,熟悉消息中间件的工作原理
+- **开源中间件:** RocketMQ,熟悉消息中间件的工作原理
 - **前端技术:** Bootstrap, jQuery, AngularJS
 - **提效工具:** Git, Docker, Kubernetes, 可以编写简单的Dockerfile简化项目部署
+- **其他开源组件:** LiteFlow规则引擎,了解规则引擎的工作原理. PowerJob调度中心,了解调度中心的工作原理. 
 
 
 # 工作经历
