@@ -55,8 +55,8 @@ draft: false
 - **开源中间件:** RocketMQ,熟悉消息中间件的工作原理
 - **前端技术:** Bootstrap, jQuery, AngularJS
 - **提效工具:** Git, Docker, Kubernetes, 可以编写简单的Dockerfile简化项目部署
-- **其他开源组件:** LiteFlow规则引擎,了解规则引擎的工作原理. PowerJob调度中心,了解调度中心的工作原理. 
-- **其他技能:** 熟悉Linux操作系统,了解常用的排查和维护工具.
+- **其他开源组件:** LiteFlow规则引擎, 了解规则引擎的工作原理. PowerJob调度中心, 了解调度中心的工作原理. 
+- **其他技能:** 熟悉Linux操作系统, 了解常用的排查和维护工具. 也能用Shell、Python、Golang、NodeJS等写一些自动化的脚本，给日常工作提效。
 
 
 # 工作经历
