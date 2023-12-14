@@ -1,0 +1,285 @@
+---
+title: "9、存储改为Minio切换方案.md"
+date: 2023-12-12T18:32:08+08:00
+draft: false
+---
+
+# 背景
+
+目前使用的mdadm组Raid1阵列的方案，真正使用的时候发现以下问题  
+磁盘的硬盘名(sda、sdb、sdc)在宿主机断电重启后会发生变化  
+比如第一次系统盘盘名为sda，两个硬盘分别为sdb、sdc  
+下次断电重启可能会变为sdb，两个磁盘是sda、sdc  
+而mdadm指定磁盘阵列使用sdb、sdc，所以断电重启后可能会导致mdadm阵列添加失败。  
+
+所以，需要更改为更稳定的方案。
+
+# 方案设计
+
+暂定使用如下方案保证在切换的过程中数据不会丢失。
+
+- 先创建一个虚拟机，添加两个磁盘，模拟虚拟机的两个硬盘，挂载硬盘，部署Minio
+- 给Minio减少一个磁盘，重启之后观察是否能重启成功并且无数据丢失
+- Minio改为另一个磁盘，重启之后观察是否能重启成功并且无数据丢失
+- Minio高可用方案确认成功之后，更换为两个磁盘同时使用的情况，然后使用rclone迁移网盘的WebDAV的数据到Minio
+- 迁移结束之后关闭原网盘，使用新网盘作为存储后端，验证网盘功能。
+- 验证无误之后，原网盘就可以格式化了，重装为Minio，和之前的Minio组为集群，等数据reshard之后，删除虚拟机的节点，此时切换完成。
+
+# 虚拟机部署Minio
+
+1、通过虚拟机模板克隆一个虚拟机，并且添加两个100G的硬盘。
+2、修改硬盘分区格式为GPT，硬盘分区，格式化。
+``` shell
+fdisk /dev/sdb
+# 输入g回车，将分区改为GPT格式，输入w保存
+fdisk /dev/sdb
+# 输入n开始分区，一路回车，分区完成
+# 格式化分区
+mkfs.ext4 /dev/sdb1
+
+# 另一个硬盘也执行相同的操作
+```
+3、设置自动挂载分区
+``` shell
+mkdir /data1
+mkdir /data2
+# 查看分区UUID
+lsblk -f
+vim /etc/fstab
+# UUID=cf942ccc-9dca-42df-a8f1-944d0ddf8f49 /data1 ext4 defaults 0 0
+# UUID=4b10498c-8b6e-4456-87a8-c279ecfecfd7 /data2 ext4 defaults 0 0
+reboot
+```
+
+4、部署Minio
+``` shell
+cd /opt
+mkdir minio-RELEASE.2023-12-09T18-17-51Z
+cd minio-RELEASE.2023-12-09T18-17-51Z
+wget https://dl.min.io/server/minio/release/linux-amd64/minio
+chmod +x minio
+```
+
+5、启动
+``` shell
+/minio server /data{1...2} --address :9000 --console-address :34567
+```
+
+
+# 模拟故障恢复
+1、停止服务
+2、卸载磁盘 `umount /dev/sdb1`
+3、格式化磁盘 mkfs.ext4 /dev/sdb1
+4、修改自动挂载磁盘 lsblk -f && vim /etc/fstab
+5、重启机器&重启服务，等待新磁盘数据同步（会自动同步）
+
+# rclone备份数据
+``` shell
+cd /opt/rclone-v1.65.0-linux-amd64
+touch rclone.conf
+vim rclone.conf
+```
+
+
+``` text
+[webdav]
+type = webdav
+url = https://files.sketcherly.xyz/dav
+vendor = other
+user = dongpo.li@hotmail.com
+pass = YUNP80rVzhvkk3WRa01VNxLmxXgsgpJJYBTwL9lhhC9Cb8Bz3AYtxGMY3Yc9KXI1
+
+[minio]
+type = s3
+provider = Minio
+env_auth = false
+access_key_id = minioadmin
+secret_access_key = minioadmin
+region = cn-north-1
+endpoint = http://192.168.1.115:9000
+```
+
+``` shell
+rclone sync webdav:/ minio:cloud-files/user1/
+```
+
+```
+mc alias set 'minio' 'http://192.168.1.115:9000' 'minioadmin' 'minioadmin'
+```
+
+# rclone挂载s3
+
+因为Cloudreve原生的s3存储策略可能有bug，上传文件总是失败，所以曲线救国，使用rclone挂在s3到本地，再使用本地文件策略  
+
+``` shell
+apt install fuse3
+rclone mount minio:cloud-files /data
+```
+
+# 备份其他数据
+
+
+# 新的网盘
+
+存储策略
+/data/user{uid}/{path}
+Minio
+
+导入
+/data/user1
+/
+
+新建文件夹 locks  .lock  temp
+
+# 部署新Minio节点
+
+1、重装虚拟机
+2、直通硬盘
+
+``` shell
+# 查看硬盘的id
+ls /dev/disk/by-id
+qm set 100 -scsi1 /dev/disk/by-id/ata-WDC_WD42PURU-64C4CY0_WD-WXE2A23MPV30
+qm set 100 -scsi2 /dev/disk/by-id/ata-WDC_WD42PURU-64C4CY0_WD-WXE2A23MPA7P
+```
+
+3、重新分区、格式化、挂载硬盘
+4、部署Minio
+5、Minio注册service
+``` text
+#minio.service文件内容
+
+[Unit]
+Description=MinIO
+Documentation=https://docs.min.io
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=root
+Group=root
+Environment="MINIO_ROOT_USER=minioadmin MINIO_ROOT_PASSWORD=minioadmin"
+ExecStart=/opt/minio/minio server /data{1...2} --address :9000 --console-address :9090
+# Let systemd restart this service always
+Restart=always
+# Specifies the maximum file descriptor number that can be opened by this process
+LimitNOFILE=65536
+# Disable timeout logic and wait until process is stopped
+TimeoutStopSec=infinity
+SendSIGKILL=no
+
+[Install]
+WantedBy=multi-user.target
+
+```
+6、配置Site Replication
+添加Site Replication节点，配置数据从虚拟机磁盘节点到硬盘节点的数据迁移
+在虚拟机磁盘节点的后台管理页面->Site Replication->Add Site
+
+``` text
+SiteName：master
+Endpoin:：http://127.0.0.1:9000
+AccessKey：minioadmin
+SecretKey：minioadmin
+
+
+SiteName：slaver
+Endpoin:：http://192.168.1.201:9000
+AccessKey：minioadmin
+SecretKey：minioadmin
+```
+
+等待数据同步完成。
+
+# 部署Cloudreve网盘
+
+1、部署服务
+``` text
+[System]
+Debug = false
+Mode = master
+Listen = :5212
+SessionSecret = z2DhRr4mB353qJxc5zoIxVFy8nkpkosj2wdWNRyFQvBirFR8izN2jznTDfJZRxCb
+HashIDSalt = cqeIb2pMGHZ52FO2T3ngfrudCoMDqGvtYslnuidzfq0sJIyJP2CjjpbKxbBqXz4U
+
+DBFile = /opt/cloudreve_3.8.1_linux_amd64/cloudreve.db
+; 进程退出前安全关闭数据库连接的缓冲时间
+GracePeriod = 30
+
+;; SSL 相关
+;[SSL]
+;; SSL 监听端口
+;Listen = :443
+;; 证书路径
+;CertPath = /opt/cloudreve_3.8.1_linux_amd64/file.butler.xin.pem
+;; 私钥路径
+;KeyPath = /opt/cloudreve_3.8.1_linux_amd64/file.butler.xin.key
+```
+
+``` text
+# cat /etc/systemd/system/cloudreve.service
+[Unit]
+Description = Cloudreve
+Documentation = https://docs.cloudreve.org
+After = network.target
+After = mysqld.service
+Wants = network.target
+
+[Service]
+User=root
+WorkingDirectory = /opt/cloudreve_3.8.2_linux_amd64
+ExecStart = /opt/cloudreve_3.8.2_linux_amd64/cloudreve
+Restart = on-abnormal
+RestartSec = 5s
+KillMode = mixed
+
+StandardOutput = null
+StandardError = syslog
+
+[Install]
+WantedBy = multi-user.target
+```
+
+2、挂载minio网盘
+``` text
+cat /opt/rclone-v1.65.0-linux-amd64/rclone.conf
+[minio]
+type = s3
+provider = Minio
+env_auth = false
+access_key_id = minioadmin
+secret_access_key = minioadmin
+region = cn-north-1
+endpoint = http://192.168.1.201:9000
+```
+``` text
+[Unit]
+# 服务名称，可自定义
+Description = mount rclone
+After = network.target syslog.target
+Wants = network.target
+
+[Service]
+Type = simple
+# 启动命令
+ExecStart = /opt/rclone-v1.65.0-linux-amd64/rclone mount minio:cloud-files /data
+
+[Install]
+WantedBy = multi-user.target
+```
+3、配置存储策略
+4、删除缩略图
+5、导入网盘数据
+6、Joplin同步数据可能会失败，可能是因为空文件夹不同步，需要手动新建文件夹 .lock locks temp
+
+
+# 其他数据备份
+挂载miinio网盘，方式同上
+配置定时脚本
+
+``` cron
+0 18 * * * bash /root/scripts/mariadb-backup.sh
+0 18 * * * cp -rp /root/scripts /data/slaver.backup/
+```
+
+
