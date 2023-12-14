@@ -274,7 +274,7 @@ WantedBy = multi-user.target
 
 
 # 其他数据备份
-挂载miinio网盘，方式同上
+挂载minio网盘，方式同上
 配置定时脚本
 
 ``` cron
