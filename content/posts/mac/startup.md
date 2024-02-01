@@ -51,4 +51,22 @@ curl 'http://192.168.1.202/index.txt'
 此时梯子网站也打开了，看教程装哪个软件，安装配置。
 
 
+# 安装输入法
 
+```
+brew install --cask squirrel
+cd ~/Library/Rime && touch default.custom.yaml
+cd ~/Software && git clone --depth 1 https://github.com/rime/plum.git
+cd plum && ./rime-install iDvel/rime-ice:others/recipes/full
+```
+
+```
+1. 打开 Mac 活动监视器，选中程序，点击上方···里取样进程
+2. 找到Identifier后面的字段即为程序标识符。
+com.jetbrains.intellij.ce
+```
+
+```
+patch:
+  menu/page_size: 7
+```
