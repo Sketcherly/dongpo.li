@@ -9,7 +9,7 @@ function toBinaryStr(str) {
 let tpl = {
     "add": "4.00888.xyz",
     "aid": "0",
-    "alpn": "",
+    "alpn": "h2",
     "fp": "chrome",
     "host": "4.00888.xyz",
     "id": "ce57d713-c4f6-44bb-a59d-737a6080bb93",
@@ -20,7 +20,7 @@ let tpl = {
     "scy": "auto",
     "sni": "4.00888.xyz",
     "tls": "tls",
-    "type": "",
+    "type": "http",
     "v": "2"
 };
 
