@@ -8,7 +8,7 @@ function toBinaryStr(str) {
 
 let tpl = {
     "add": "4.00888.xyz",
-    "aid": "64",
+    "aid": "0",
     "alpn": "",
     "fp": "chrome",
     "host": "4.00888.xyz",
