@@ -73,5 +73,9 @@ for (let i = 0; i < servers.length; i++) {
 
     // console.log(JSON.stringify(obj))
 
-    console.log(protocol + btoa(toBinaryStr(JSON.stringify(obj))));
+    // console.log(protocol + btoa(toBinaryStr(JSON.stringify(obj))));
+
+    responseBody += protocol + btoa(toBinaryStr(JSON.stringify(obj))) + '\n';
 }
+
+console.log(responseBody)
