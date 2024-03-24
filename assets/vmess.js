@@ -6,7 +6,7 @@ function toBinaryStr(str) {
     return String.fromCharCode(...charCodes);
 }
 
-let tpl = {
+const tpl = {
     "add": "4.00888.xyz",
     "aid": "0",
     "alpn": "",
@@ -26,32 +26,52 @@ let tpl = {
 
 let responseBody = '';
 
-
-let servers = {
-    "0": "美国-1-(洛杉矶-BWH-GIA)",
-    "1": "美国-2-(洛杉矶-BWH-GIA)",
-    "2": "美国-3-(洛杉矶-DMIT-GIA)",
-    "8": "美国-4-(洛杉矶-RN)",
-    "9": "法国-1-(斯特拉斯堡-RN)"
-};
+let servers = [
+    {
+        "host": "0",
+        "name": "美国-1-(洛杉矶-BWH-GIA)"
+    },
+    {
+        "host": "1",
+        "name": "美国-2-(洛杉矶-BWH-GIA)"
+    },
+    {
+        "host": "2",
+        "name": "美国-3-(洛杉矶-DMIT-GIA)",
+        "uid": "85d105b9-ebbf-40db-9a0d-7b66f3f81db6"
+    },
+    {
+        "host": "8",
+        "name": "美国-4-(洛杉矶-RN)"
+    },
+    {
+        "host": "9",
+        "name": "法国-1-(斯特拉斯堡-RN)"
+    }
+];
 let domain = '00888.xyz';
 
 let protocol = "vmess://";
 
-for (const key in servers) {
-    if (Object.hasOwnProperty.call(servers, key)) {
-        const element = servers[key];
+for (let i = 0; i < servers.length; i++) {
+    const element = servers[i];
 
-        let host = key + '.' + domain;
+    let host = element.host + '.' + domain;
 
-        tpl.add = host;
-        tpl.host = host;
-        tpl.sni = host;
-        tpl.ps = servers[key];
+    let obj = Object.create(tpl);
 
-        responseBody += protocol + btoa(toBinaryStr(JSON.stringify(tpl))) + '\n';
+    obj.add = host;
+    obj.host = host;
+    obj.sni = host;
+    obj.ps = element.name;
+
+    if (element['uid']) {
+        obj.id = element.uid;
+    } else {
+        obj.id = tpl.id;
     }
+
+    // console.log(JSON.stringify(obj))
+
+    console.log(protocol + btoa(toBinaryStr(JSON.stringify(obj))));
 }
-
-
-console.log(responseBody)
