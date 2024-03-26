@@ -28,35 +28,40 @@ let responseBody = '';
 
 let servers = [
     {
+        "domain": "888888888.uk",
         "host": "0",
         "name": "美国-1-(洛杉矶-BWH-GIA)"
     },
     {
+        "domain": "888888888.uk",
         "host": "1",
         "name": "美国-2-(洛杉矶-BWH-GIA)"
     },
+    // {
+    //     "domain": "00888.xyz",
+    //     "host": "2",
+    //     "name": "美国-3-(洛杉矶-DMIT-GIA)",
+    //     "uid": "85d105b9-ebbf-40db-9a0d-7b66f3f81db6"
+    // },
     {
-        "host": "2",
-        "name": "美国-3-(洛杉矶-DMIT-GIA)",
-        "uid": "85d105b9-ebbf-40db-9a0d-7b66f3f81db6"
-    },
-    {
+        "domain": "888888888.uk",
         "host": "8",
         "name": "美国-4-(洛杉矶-RN)"
     },
-    {
-        "host": "9",
-        "name": "法国-1-(斯特拉斯堡-RN)"
-    }
+    // {
+    //     "domain": "00888.xyz",
+    //     "host": "9",
+    //     "name": "法国-1-(斯特拉斯堡-RN)"
+    // }
 ];
-let domain = '00888.xyz';
+
 
 let protocol = "vmess://";
 
 for (let i = 0; i < servers.length; i++) {
     const element = servers[i];
 
-    let host = element.host + '.' + domain;
+    let host = element.host + '.' + element.domain;
 
     let obj = Object.assign({}, tpl);
 
