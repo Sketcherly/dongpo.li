@@ -1,5 +1,5 @@
 ---
-title: "7、制作虚拟机模板"
+title: "7、部署NFS服务"
 date: 2023-08-01T10:32:08+08:00
 draft: true
 ---
@@ -15,7 +15,7 @@ vim /etc/exports
 ```
 
 ``` text
-/data/slaver.backup  192.168.1.113(rw,sync,no_root_squash,no_subtree_check)
+/data  192.168.1.201/24(rw,sync,no_root_squash,no_subtree_check)
 ```
 
 # 生效配置
