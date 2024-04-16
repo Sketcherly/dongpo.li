@@ -87,7 +87,7 @@ vim /usr/local/etc/v2ray/config.json
             "settings": {
                 "clients": [
                     {
-                        "id": "ce57d713-c4f6-44bb-a59d-737a6080bb93"
+                        "id": "****"
                     }
                 ]
             },

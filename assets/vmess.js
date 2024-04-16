@@ -45,8 +45,8 @@ let servers = [
     // },
     {
         "domain": "888888888.uk",
-        "host": "8",
-        "name": "美国-4-(洛杉矶-RN)"
+        "host": "9",
+        "name": "美国-9-(洛杉矶-RN-备用)"
     },
     // {
     //     "domain": "00888.xyz",
@@ -84,3 +84,55 @@ for (let i = 0; i < servers.length; i++) {
 }
 
 // console.log(responseBody)
+
+const vmess_tcp_tls_tpl = {
+    "fp": "chrome",
+    "port": "443",
+    "security": "none",
+    "ps": "TCP-TLS",
+    "type": "none",
+    "host": "",
+    "aid": "0",
+    "id": "ce57d713-c4f6-44bb-a59d-737a6080bb93",
+    "net": "tcp",
+    "sni": "",
+    "tls": "tls",
+    "v": "2",
+    "add": "4.888888888.uk",
+    "path": ""
+}
+let vmess_tcp_tls_servers = [
+    {
+        "domain": "888888888.uk",
+        "host": "2",
+        "name": "美国-3-(洛杉矶-BWH-GIA-DC9)"
+    },
+    {
+        "domain": "888888888.uk",
+        "host": "3",
+        "name": "美国-4-(洛杉矶-BWH-GIA-DC9)"
+    }
+];
+
+for (let i = 0; i < vmess_tcp_tls_servers.length; i++) {
+    const element = vmess_tcp_tls_servers[i];
+
+    let host = element.host + '.' + element.domain;
+
+    let obj = Object.assign({}, vmess_tcp_tls_tpl);
+
+    obj.add = host;
+    obj.ps = element.name;
+
+    if (element['uid']) {
+        obj.id = element.uid;
+    } else {
+        obj.id = vmess_tcp_tls_tpl.id;
+    }
+
+    // console.log(JSON.stringify(obj))
+
+    console.log(protocol + btoa(toBinaryStr(JSON.stringify(obj))));
+
+    // responseBody += protocol + btoa(toBinaryStr(JSON.stringify(obj))) + '\n';
+}
