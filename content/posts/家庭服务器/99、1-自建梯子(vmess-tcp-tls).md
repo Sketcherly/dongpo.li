@@ -44,6 +44,7 @@ server {
 ```
 systemctl restart nginx
 cd /var/www/html
+rm -f index.nginx-debian.html
 dd if=/dev/zero of=100MB.tar.gz count=1 bs=100M
 dd if=/dev/zero of=500MB.tar.gz count=5 bs=100M
 dd if=/dev/zero of=1000MB.tar.gz count=10 bs=100M
@@ -86,7 +87,7 @@ vim /usr/local/etc/v2ray/config.json
             "settings": {
                 "clients": [
                     {
-                        "id": "****"
+                        "id": "ce57d713-c4f6-44bb-a59d-737a6080bb93"
                     }
                 ]
             },
@@ -112,8 +113,6 @@ systemctl restart v2ray
 ```
 # 文件在/etc/haproxy/888888888.uk.pem
 acme.sh --deploy -d 888888888.uk --deploy-hook haproxy
-cd /etc/haproxy
-mkdir ssl
 scp -P 123456 /etc/haproxy/888888888.uk.pem root@4.888888888.uk:/etc/haproxy/ssl/
 ```
 
@@ -122,6 +121,8 @@ scp -P 123456 /etc/haproxy/888888888.uk.pem root@4.888888888.uk:/etc/haproxy/ssl
 
 ``` shell
 apt install -y haproxy
+cd /etc/haproxy
+mkdir ssl
 cp -rp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.bak
 vim /etc/haproxy/haproxy.cfg
 ```
