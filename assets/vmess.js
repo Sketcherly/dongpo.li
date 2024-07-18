@@ -124,7 +124,7 @@ let vmess_tcp_tls_servers = [
     },
     {
         "domain": "888888888.uk",
-        "host": "5",
+        "host": "6",
         "name": "美国-6-(洛杉矶-DMIT)"
     }
 ];
