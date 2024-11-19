@@ -1,14 +1,16 @@
 baseURL: "https://www.dongpo.li/"
 title: Sketcherly
-paginate: 5
 theme: PaperMod
+
+pagination:
+  pagerSize: 5
 
 enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
 
-googleAnalytics: UA-123-45
+# googleAnalytics: UA-123-45
 
 minify:
   disableXML: true
@@ -132,6 +134,10 @@ menu:
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
+#   defaultMarkdownHandler: goldmark
+#   goldmark:
+#     renderer:
+#       unsafe: true
   highlight:
     noClasses: false
     # anchorLineNos: true
@@ -139,3 +145,6 @@ markup:
     # guessSyntax: true
     # lineNos: true
     # style: monokai
+
+ignoreLogs: ['warning-goldmark-raw-html']
+
