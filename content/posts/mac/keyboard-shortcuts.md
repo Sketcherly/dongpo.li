@@ -2,9 +2,8 @@
 title: "Idea快捷键记录(Mac)"
 date: 2019-06-19T13:42:29+08:00
 draft: false
+summary: ' '
 ---
-
-<!--more-->
 
 
 # Idea快捷键记录(Mac)

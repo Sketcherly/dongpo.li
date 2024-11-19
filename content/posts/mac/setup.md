@@ -2,9 +2,9 @@
 title: "Mac配置开发环境-Javaer"
 date: 2019-04-28T11:19:35+08:00
 draft: false
+summary: ' '
 ---
 
-<!--more-->
 
 # 安装软件
 
