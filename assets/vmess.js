@@ -29,11 +29,6 @@ let responseBody = '';
 let servers = [
     {
         "domain": "888888888.uk",
-        "host": "0",
-        "name": "美国-1-(洛杉矶-BWH-GIA)"
-    },
-    {
-        "domain": "888888888.uk",
         "host": "1",
         "name": "美国-2-(洛杉矶-BWH-GIA)"
     },
@@ -102,6 +97,11 @@ const vmess_tcp_tls_tpl = {
     "path": ""
 }
 let vmess_tcp_tls_servers = [
+    {
+        "domain": "888888888.uk",
+        "host": "0",
+        "name": "美国-1-(洛杉矶-BWH-GIA)"
+    },
     {
         "domain": "888888888.uk",
         "host": "2",
