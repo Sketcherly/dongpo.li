@@ -12,6 +12,9 @@ summary: '一篇自己撸各种配置搭建梯子的笔记文章'
 # 安装依赖软件
 目前已知的依赖，已安装的请忽略
 ```
+vim /etc/ssh/sshd_config
+# 搜索 /Client 将 ClientAliveInterval 0前边的注释去掉并且改为 ClientAliveInterval 60
+systemctl restart sshd
 apt install -y vim curl
 ```
 
