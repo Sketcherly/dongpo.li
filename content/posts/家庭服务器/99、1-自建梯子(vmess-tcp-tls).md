@@ -184,6 +184,10 @@ backend vmess
 还有defaults>mode>tcp
 
 
+```
+systemctl enable haproxy
+systemctl restart haproxy
+```
 
 
 
