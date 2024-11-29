@@ -193,6 +193,14 @@ systemctl restart haproxy
 ```
 
 
+配置网络优先使用ip4
+```
+vim /etc/gai.conf
+# 复制 #precedence ::ffff:0:0/96 100 到一个新行并且把前边的注释去掉
+# 测试使用
+ping www.google.com
+```
+
 
 
 # 安装配置客户端
