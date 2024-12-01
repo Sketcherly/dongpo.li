@@ -27,11 +27,11 @@ const tpl = {
 let responseBody = '';
 
 let servers = [
-    {
-        "domain": "888888888.uk",
-        "host": "1",
-        "name": "美国-2-(洛杉矶-BWH-GIA)"
-    },
+    // {
+    //     "domain": "888888888.uk",
+    //     "host": "1",
+    //     "name": "美国-2-(洛杉矶-BWH-GIA)"
+    // },
     // {
     //     "domain": "00888.xyz",
     //     "host": "2",
