@@ -69,7 +69,7 @@ bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/
 ```
 
 <!-- 
-curl -o /usr/local/etc/v2ray/config.json 'https://www.dongpo.li/config.json'
+curl 'https://dongpo.li/vmess-server-config.json' -o /usr/local/etc/v2ray/config.json
  -->
 
 ```
@@ -156,6 +156,91 @@ vim /usr/local/etc/v2ray/config.json
     ]
 }
 ```
+
+下边这个配置厉害了，是可以根据id来区分是走中转还是走直连的
+```
+{
+    "log": {
+        "loglevel": "warning",
+        "access": "/var/log/v2ray/access.log",
+        "error": "/var/log/v2ray/error.log"
+    },
+    "inbounds": [
+        {
+            "protocol": "vmess",
+            "listen": "127.0.0.1",
+            "port": 12345,
+            "settings": {
+                "clients": [
+                    {
+                        "email": "1@123.com",
+                        "id": "id1"
+                    },
+                    {
+                        "email": "2@123.com",
+                        "id": "id2"
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp"
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom",
+            "tag": "direct"
+        },
+        {
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "落地机ip",
+                        "port": 12345,
+                        "users": [
+                            {
+                                "id": "id3"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "tag": "transit"
+        }
+    ],
+    "routing": {
+        "rules": [
+            {
+                "type": "field",
+                "user": [
+                    "1@123.com"
+                ],
+                "outboundTag": "direct"
+            },
+            {
+                "type": "field",
+                "user": [
+                    "2@123.com"
+                ],
+                "outboundTag": "transit"
+            }
+        ]
+    }
+}
+```
+核心思路是每个id账号可以绑定一个email，路由里根据id区分用户，不同id走不通的出口  
+上边配置只需要改四处  
+1、id1 一个用户id  
+2、id2 另一个用户id 和1区分不同用户  
+3、落地机ip 落地机的实际ip  
+3、id3 这个要看落地机的id，和落地机的id一样  
+
+这样客户端可以根据id每个入口机器添加两个节点，选择不同节点就可以手动选择是直连还是中转。
+一般来说我们都选择中转，因为入口机器的ip通常不太好，需要一个干净点的ip作为出口ip。
+添加一个直连选择是为了可以在节点出问题的时候快速判断是入口机的问题还是落地机的问题。
+
 
 ```
 systemctl enable v2ray
