@@ -108,6 +108,55 @@ vim /usr/local/etc/v2ray/config.json
 }
 ```
 
+下边是一个含有落地机的配置。落地机的部署方式更简单，因为不需要伪装，所以不需要haproxy，nginx，当然也不需要tls证书，只需要安装v2ray就可以了，配置也基本一样，只是需要注意，监听的ip不是127.0.0.1而是0.0.0.0
+
+> 注意落地机需要监听0.0.0.0
+
+```
+{
+    "log": {
+        "loglevel": "warning",
+        "access": "/var/log/v2ray/access.log",
+        "error": "/var/log/v2ray/error.log"
+    },
+    "inbounds": [
+        {
+            "protocol": "vmess",
+            "listen": "127.0.0.1",
+            "port": 12345,
+            "settings": {
+                "clients": [
+                    {
+                        "id": "ce57d713-c4f6-44bb-a59d-737a6080bb93"
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp"
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "*.*.*.*",
+                        "port": 12345,
+                        "users": [
+                            {
+                                "id": "****(落地机的id，可以跟入口的不一样，具体看落地机配置)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
+```
+
 ```
 systemctl enable v2ray
 systemctl restart v2ray
