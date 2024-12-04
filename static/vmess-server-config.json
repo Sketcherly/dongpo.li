@@ -57,8 +57,8 @@
             "settings": {
                 "servers": [
                     {
-                        "address": "74.122.62.44",
-                        "port": 7485,
+                        "address": "74.122.61.198",
+                        "port": 7030,
                         "users": [
                             {
                                 "user": "emxppqnn",
