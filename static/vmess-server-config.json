@@ -22,6 +22,10 @@
                     {
                         "email": "3@123.com",
                         "id": "b63e5bf6-cfc9-4b47-a07d-cd8be0f63a70"
+                    },
+                    {
+                        "email": "4@123.com",
+                        "id": "e9940638-e0db-4420-b8f3-8426016fdb53"
                     }
                 ]
             },
@@ -70,6 +74,25 @@
                 ]
             },
             "tag": "transit-socks"
+        },
+        {
+            "protocol": "socks",
+            "settings": {
+                "servers": [
+                    {
+                        "address": "159.148.109.180",
+                        "port": 5782,
+                        "users": [
+                            {
+                                "user": "emxppqnn",
+                                "pass": "2fbtq7jpzywu",
+                                "level": 0
+                            }
+                        ]
+                    }
+                ]
+            },
+            "tag": "transit-socks-fr"
         }
     ],
     "routing": {
@@ -94,6 +117,13 @@
                     "3@123.com"
                 ],
                 "outboundTag": "transit-socks"
+            },
+            {
+                "type": "field",
+                "user": [
+                    "4@123.com"
+                ],
+                "outboundTag": "transit-socks-fr"
             }
         ]
     }
