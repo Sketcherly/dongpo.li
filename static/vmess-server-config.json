@@ -61,8 +61,8 @@
             "settings": {
                 "servers": [
                     {
-                        "address": "168.158.185.213",
-                        "port": 6480,
+                        "address": "168.158.184.165",
+                        "port": 6176,
                         "users": [
                             {
                                 "user": "emxppqnn",
