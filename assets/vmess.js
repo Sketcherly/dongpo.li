@@ -191,13 +191,13 @@ let vmess_tcp_tls_servers = [
     {
         "domain": "888888888.uk",
         "host": "6",
-        "name": "洛杉矶-DMIT-主-落地(亚利桑那-梅萨)",
+        "name": "洛杉矶-DMIT-将过期-落地(亚利桑那-梅萨)",
         "uid": "b63e5bf6-cfc9-4b47-a07d-cd8be0f63a70"
     },
     // {
     //     "domain": "888888888.uk",
     //     "host": "6",
-    //     "name": "洛杉矶-DMIT-主-落地(巴黎)",
+    //     "name": "洛杉矶-DMIT-将过期-落地(巴黎)",
     //     "uid": "e9940638-e0db-4420-b8f3-8426016fdb53"
     // },
 ];
