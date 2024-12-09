@@ -200,6 +200,12 @@ let vmess_tcp_tls_servers = [
     //     "name": "洛杉矶-DMIT-将过期-落地(巴黎)",
     //     "uid": "e9940638-e0db-4420-b8f3-8426016fdb53"
     // },
+    {
+        "domain": "888888888.uk",
+        "host": "7",
+        "name": "香港-Akile-直连",
+        "uid": "ce57d713-c4f6-44bb-a59d-737a6080bb93"
+    },
 ];
 
 for (let i = 0; i < vmess_tcp_tls_servers.length; i++) {
