@@ -80,8 +80,8 @@
             "settings": {
                 "servers": [
                     {
-                        "address": "159.148.109.180",
-                        "port": 5782,
+                        "address": "82.140.159.101",
+                        "port": 6101,
                         "users": [
                             {
                                 "user": "emxppqnn",
