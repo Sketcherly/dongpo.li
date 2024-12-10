@@ -121,12 +121,6 @@ let vmess_tcp_tls_servers = [
         "name": "洛杉矶-DMIT-主-落地(亚利桑那-梅萨)",
         "uid": "b63e5bf6-cfc9-4b47-a07d-cd8be0f63a70"
     },
-    {
-        "domain": "888888888.uk",
-        "host": "5",
-        "name": "洛杉矶-DMIT-主-落地(巴黎)",
-        "uid": "e9940638-e0db-4420-b8f3-8426016fdb53"
-    },
 
     // 0
     {
@@ -147,12 +141,6 @@ let vmess_tcp_tls_servers = [
         "name": "洛杉矶-BWH-备-落地(亚利桑那-梅萨)",
         "uid": "b63e5bf6-cfc9-4b47-a07d-cd8be0f63a70"
     },
-    // {
-    //     "domain": "888888888.uk",
-    //     "host": "0",
-    //     "name": "洛杉矶-DMIT-备-落地(巴黎)",
-    //     "uid": "e9940638-e0db-4420-b8f3-8426016fdb53"
-    // },
 
     // 3
     {
@@ -161,12 +149,6 @@ let vmess_tcp_tls_servers = [
         "name": "洛杉矶-BWH-将过期-直连",
         "uid": "ce57d713-c4f6-44bb-a59d-737a6080bb93"
     },
-    // {
-    //     "domain": "888888888.uk",
-    //     "host": "3",
-    //     "name": "洛杉矶-BWH-将过期-中转",
-    //     "uid": "0a2f7c3e-6716-4323-b1d0-a2a99761e2bb"
-    // },
 
     // 4
     {
@@ -194,12 +176,6 @@ let vmess_tcp_tls_servers = [
         "name": "洛杉矶-DMIT-将过期-落地(亚利桑那-梅萨)",
         "uid": "b63e5bf6-cfc9-4b47-a07d-cd8be0f63a70"
     },
-    // {
-    //     "domain": "888888888.uk",
-    //     "host": "6",
-    //     "name": "洛杉矶-DMIT-将过期-落地(巴黎)",
-    //     "uid": "e9940638-e0db-4420-b8f3-8426016fdb53"
-    // },
     {
         "domain": "888888888.uk",
         "host": "7",
