@@ -121,6 +121,12 @@ let vmess_tcp_tls_servers = [
         "name": "洛杉矶-DMIT-主-落地(亚利桑那-梅萨)",
         "uid": "b63e5bf6-cfc9-4b47-a07d-cd8be0f63a70"
     },
+    {
+        "domain": "888888888.uk",
+        "host": "5",
+        "name": "洛杉矶-DMIT-主-落地(香港)",
+        "uid": "1a92a59b-e345-43c5-b822-87bb4ac7b51c"
+    },
 
     // 0
     {
@@ -140,6 +146,12 @@ let vmess_tcp_tls_servers = [
         "host": "0",
         "name": "洛杉矶-BWH-备-落地(亚利桑那-梅萨)",
         "uid": "b63e5bf6-cfc9-4b47-a07d-cd8be0f63a70"
+    },
+    {
+        "domain": "888888888.uk",
+        "host": "0",
+        "name": "洛杉矶-BWH-备-落地(香港)",
+        "uid": "1a92a59b-e345-43c5-b822-87bb4ac7b51c"
     },
 
     // 3
@@ -175,13 +187,7 @@ let vmess_tcp_tls_servers = [
         "host": "6",
         "name": "洛杉矶-DMIT-将过期-落地(亚利桑那-梅萨)",
         "uid": "b63e5bf6-cfc9-4b47-a07d-cd8be0f63a70"
-    },
-    {
-        "domain": "888888888.uk",
-        "host": "7",
-        "name": "香港-Akile-直连",
-        "uid": "ce57d713-c4f6-44bb-a59d-737a6080bb93"
-    },
+    }
 ];
 
 for (let i = 0; i < vmess_tcp_tls_servers.length; i++) {

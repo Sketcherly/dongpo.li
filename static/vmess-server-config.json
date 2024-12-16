@@ -25,7 +25,7 @@
                     },
                     {
                         "email": "4@123.com",
-                        "id": "e9940638-e0db-4420-b8f3-8426016fdb53"
+                        "id": "1a92a59b-e345-43c5-b822-87bb4ac7b51c"
                     }
                 ]
             },
@@ -74,6 +74,23 @@
                 ]
             },
             "tag": "transit-socks"
+        },
+        {
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "83.147.0.71",
+                        "port": 12345,
+                        "users": [
+                            {
+                                "id": "ce57d713-c4f6-44bb-a59d-737a6080bb93"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "tag": "transit-hk"
         }
     ],
     "routing": {
@@ -98,6 +115,13 @@
                     "3@123.com"
                 ],
                 "outboundTag": "transit-socks"
+            },
+            {
+                "type": "field",
+                "user": [
+                    "4@123.com"
+                ],
+                "outboundTag": "transit-hk"
             }
         ]
     }
