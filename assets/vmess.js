@@ -112,12 +112,6 @@ let vmess_tcp_tls_servers = [
     {
         "domain": "888888888.uk",
         "host": "5",
-        "name": "洛杉矶-DMIT-主-中转",
-        "uid": "0a2f7c3e-6716-4323-b1d0-a2a99761e2bb"
-    },
-    {
-        "domain": "888888888.uk",
-        "host": "5",
         "name": "洛杉矶-DMIT-主-落地(亚利桑那-梅萨)",
         "uid": "b63e5bf6-cfc9-4b47-a07d-cd8be0f63a70"
     },
@@ -134,12 +128,6 @@ let vmess_tcp_tls_servers = [
         "host": "0",
         "name": "洛杉矶-BWH-备-直连",
         "uid": "ce57d713-c4f6-44bb-a59d-737a6080bb93"
-    },
-    {
-        "domain": "888888888.uk",
-        "host": "0",
-        "name": "洛杉矶-BWH-备-中转",
-        "uid": "0a2f7c3e-6716-4323-b1d0-a2a99761e2bb"
     },
     {
         "domain": "888888888.uk",
@@ -175,12 +163,6 @@ let vmess_tcp_tls_servers = [
         "host": "6",
         "name": "洛杉矶-DMIT-将过期-直连",
         "uid": "ce57d713-c4f6-44bb-a59d-737a6080bb93"
-    },
-    {
-        "domain": "888888888.uk",
-        "host": "6",
-        "name": "洛杉矶-DMIT-将过期-中转",
-        "uid": "0a2f7c3e-6716-4323-b1d0-a2a99761e2bb"
     },
     {
         "domain": "888888888.uk",
