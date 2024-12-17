@@ -126,6 +126,12 @@ let vmess_tcp_tls_servers = [
     {
         "domain": "888888888.uk",
         "host": "0",
+        "name": "洛杉矶-BWH-备-规则",
+        "uid": "7778bc68-9df0-4891-84c5-696de94c8531"
+    },
+    {
+        "domain": "888888888.uk",
+        "host": "0",
         "name": "洛杉矶-BWH-备-直连",
         "uid": "ce57d713-c4f6-44bb-a59d-737a6080bb93"
     },

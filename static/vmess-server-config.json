@@ -12,6 +12,10 @@
             "settings": {
                 "clients": [
                     {
+                        "email": "0@123.com",
+                        "id": "7778bc68-9df0-4891-84c5-696de94c8531"
+                    },
+                    {
                         "email": "1@123.com",
                         "id": "ce57d713-c4f6-44bb-a59d-737a6080bb93"
                     },
@@ -77,19 +81,32 @@
             {
                 "type": "field",
                 "user": [
-                    "1@123.com"
+                    "0@123.com"
                 ],
-                "outboundTag": "direct"
+                "domain": [
+                    "domain:ultramobile.com",
+                    "domain:chatgpt.com",
+                    "domain:openai.com",
+                    "full:gemini.google.com"
+                ],
+                "outboundTag": "transit-socks"
             },
             {
                 "type": "field",
                 "user": [
-                    "2@123.com"
+                    "0@123.com"
                 ],
                 "domain": [
-                    "ultramobile.com"
+                    "domain:redotpay.com"
                 ],
-                "outboundTag": "transit-socks"
+                "outboundTag": "transit-hk"
+            },
+            {
+                "type": "field",
+                "user": [
+                    "1@123.com"
+                ],
+                "outboundTag": "direct"
             },
             {
                 "type": "field",
