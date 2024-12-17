@@ -87,6 +87,7 @@
                     "domain:ultramobile.com",
                     "domain:chatgpt.com",
                     "domain:openai.com",
+                    "domain:paypal.com",
                     "full:gemini.google.com"
                 ],
                 "outboundTag": "transit-socks"
