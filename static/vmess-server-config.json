@@ -111,6 +111,13 @@
             {
                 "type": "field",
                 "user": [
+                    "2@123.com"
+                ],
+                "outboundTag": "transit-socks"
+            },
+            {
+                "type": "field",
+                "user": [
                     "3@123.com"
                 ],
                 "outboundTag": "transit-hk"
