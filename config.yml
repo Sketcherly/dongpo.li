@@ -126,11 +126,11 @@ menu:
       name: 标签
       url: /tags/
       weight: 20
-    - identifier: about
-      name: 关于我
-      # url: https://example.org
-      url: posts/about/
-      weight: 30
+    # - identifier: about
+    #   name: 关于我
+    #   # url: https://example.org
+    #   url: posts/about/
+    #   weight: 30
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
