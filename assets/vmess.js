@@ -118,13 +118,13 @@ let vmess_tcp_tls_servers = [
     {
         "domain": "888888888.uk",
         "host": "0",
-        "name": "亚利桑那-梅萨",
+        "name": "美国-亚利桑那州-梅萨",
         "uid": "b63e5bf6-cfc9-4b47-a07d-cd8be0f63a70"
     },
     {
         "domain": "888888888.uk",
         "host": "0",
-        "name": "香港",
+        "name": "！美国",
         "uid": "1a92a59b-e345-43c5-b822-87bb4ac7b51c"
     },
 
@@ -143,39 +143,39 @@ let vmess_tcp_tls_servers = [
         "name": "大阪-BWH-直连"
     },
 
-    // 5
-    {
-        "domain": "888888888.uk",
-        "host": "5",
-        "name": "洛杉矶-DMIT-主-直连",
-        "uid": "ce57d713-c4f6-44bb-a59d-737a6080bb93"
-    },
-    {
-        "domain": "888888888.uk",
-        "host": "5",
-        "name": "洛杉矶-DMIT-主-落地(亚利桑那-梅萨)",
-        "uid": "b63e5bf6-cfc9-4b47-a07d-cd8be0f63a70"
-    },
-    {
-        "domain": "888888888.uk",
-        "host": "5",
-        "name": "洛杉矶-DMIT-主-落地(香港)",
-        "uid": "1a92a59b-e345-43c5-b822-87bb4ac7b51c"
-    },
+    // // 5
+    // {
+    //     "domain": "888888888.uk",
+    //     "host": "5",
+    //     "name": "洛杉矶-DMIT-主-直连",
+    //     "uid": "ce57d713-c4f6-44bb-a59d-737a6080bb93"
+    // },
+    // {
+    //     "domain": "888888888.uk",
+    //     "host": "5",
+    //     "name": "洛杉矶-DMIT-主-落地(亚利桑那-梅萨)",
+    //     "uid": "b63e5bf6-cfc9-4b47-a07d-cd8be0f63a70"
+    // },
+    // {
+    //     "domain": "888888888.uk",
+    //     "host": "5",
+    //     "name": "洛杉矶-DMIT-主-落地(香港)",
+    //     "uid": "1a92a59b-e345-43c5-b822-87bb4ac7b51c"
+    // },
 
-    // 6
-    {
-        "domain": "888888888.uk",
-        "host": "6",
-        "name": "洛杉矶-DMIT-将过期-直连",
-        "uid": "ce57d713-c4f6-44bb-a59d-737a6080bb93"
-    },
-    {
-        "domain": "888888888.uk",
-        "host": "6",
-        "name": "洛杉矶-DMIT-将过期-落地(亚利桑那-梅萨)",
-        "uid": "b63e5bf6-cfc9-4b47-a07d-cd8be0f63a70"
-    }
+    // // 6
+    // {
+    //     "domain": "888888888.uk",
+    //     "host": "6",
+    //     "name": "洛杉矶-DMIT-将过期-直连",
+    //     "uid": "ce57d713-c4f6-44bb-a59d-737a6080bb93"
+    // },
+    // {
+    //     "domain": "888888888.uk",
+    //     "host": "6",
+    //     "name": "洛杉矶-DMIT-将过期-落地(亚利桑那-梅萨)",
+    //     "uid": "b63e5bf6-cfc9-4b47-a07d-cd8be0f63a70"
+    // }
 ];
 
 for (let i = 0; i < vmess_tcp_tls_servers.length; i++) {
