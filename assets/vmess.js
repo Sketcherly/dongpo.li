@@ -128,6 +128,14 @@ let vmess_tcp_tls_servers = [
         "uid": "1a92a59b-e345-43c5-b822-87bb4ac7b51c"
     },
 
+    // 8
+    {
+        "domain": "888888888.uk",
+        "host": "8",
+        "name": "备用",
+        "uid": "ce57d713-c4f6-44bb-a59d-737a6080bb93"
+    },
+
     // 3
     {
         "domain": "888888888.uk",
@@ -197,7 +205,7 @@ for (let i = 0; i < vmess_tcp_tls_servers.length; i++) {
     // console.log(JSON.stringify(obj))
 
     console.log(protocol + btoa(toBinaryStr(JSON.stringify(obj))));
-    if (i == 3) {
+    if (i == 4) {
         console.log('\n\n\n\n\n');
     }
 
