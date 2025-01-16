@@ -1,10 +1,11 @@
 #!bash
 
 
-# curl -s 'https://dongpo.li/vmess-tls-setup.sh-1' | bash -c 83.147.0.71 22
+# curl -s 'https://dongpo.li/vmess-tls-setup-1.sh' | bash -s 83.147.0.71 22
 
 if [ -z ${1} ];then
 	echo '请先指定主机地址'
+    exit 1
 fi
 
 HOST=${1}
