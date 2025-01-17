@@ -12,7 +12,7 @@ systemctl restart sshd
 
 
 apt install -y nginx
-curl 'https://dongpo.li/0.888888888.uk.conf' -o /etc/nginx/conf.d/0.888888888.uk.conf
+curl 'https://dongpo.li/any.ukns.uk.conf' -o /etc/nginx/conf.d/any.ukns.uk.conf
 systemctl enable nginx
 systemctl start nginx
 
@@ -44,7 +44,7 @@ systemctl enable haproxy
 
 
 # mv /root/.ssh/known_hosts /root/.ssh/known_hosts.backup
-# scp -P 22 /root/zerossl/888888888.uk.pem root@83.147.0.71:/etc/haproxy/ssl/
+# scp -P 22 /root/zerossl/any.ukns.uk.pem root@83.147.0.71:/etc/haproxy/ssl/
 # ssh -p 22 root@83.147.0.71 'systemctl restart haproxy'
 # rm -f /root/.ssh/known_hosts
 # mv /root/.ssh/known_hosts.backup /root/.ssh/known_hosts
