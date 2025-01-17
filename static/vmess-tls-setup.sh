@@ -5,6 +5,8 @@
 
 apt update
 
+sed -i "s/# alias ll=.*/alias ll='ls -al --color'/g" /root/.bashrc
+
 apt install -y vim curl
 sed -i "s/#ClientAliveInterval 0/ClientAliveInterval 60/g" /etc/ssh/sshd_config
 systemctl restart sshd
