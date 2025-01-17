@@ -13,6 +13,9 @@ systemctl restart sshd
 
 apt install -y nginx
 curl 'https://dongpo.li/any.ukns.uk.conf' -o /etc/nginx/conf.d/any.ukns.uk.conf
+
+sed -i "s/user www-data;/user root;/g" /etc/nginx/nginx.conf
+
 systemctl enable nginx
 systemctl start nginx
 
