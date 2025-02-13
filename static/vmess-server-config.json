@@ -59,17 +59,15 @@
             "tag": "transit-socks"
         },
         {
-            "protocol": "socks",
+            "protocol": "vmess",
             "settings": {
-                "servers": [
+                "vnext": [
                     {
-                        "address": "46.203.4.80",
-                        "port": 7581,
+                        "address": "45.149.186.103",
+                        "port": 12345,
                         "users": [
                             {
-                                "user": "emxppqnn",
-                                "pass": "2fbtq7jpzywu",
-                                "level": 0
+                                "id": "ce57d713-c4f6-44bb-a59d-737a6080bb93"
                             }
                         ]
                     }
