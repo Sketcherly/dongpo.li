@@ -31,7 +31,7 @@ vim .bashrc
 <!-- KMtQJewUgUZWlND7K-RBjBLS5pW3LdhTgoCjWxUa -->
 # CF_Token在CF后台-我的个人资料-API令牌-用户API令牌 中添加
 export CF_Token="****"
-acme.sh --issue -d *.dongpo.li -d dongpo.li --dns dns_cf
+acme.sh --issue -d dongpo.li -d *.dongpo.li --dns dns_cf
 
 cd /etc/nginx/conf.d/
 mkdir cert
@@ -40,7 +40,7 @@ cd ..
 touch www.dongpo.li.conf
 vim www.dongpo.li.conf
 
-acme.sh --install-cert -d *.dongpo.li \
+acme.sh --install-cert -d dongpo.li \
  --key-file       /etc/nginx/conf.d/cert/any.dongpo.li.key  \
  --fullchain-file /etc/nginx/conf.d/cert/any.dongpo.li.crt \
  --reloadcmd     "systemctl restart nginx"
