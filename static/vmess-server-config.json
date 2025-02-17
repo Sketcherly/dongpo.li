@@ -80,16 +80,16 @@
             "tag": "transit-hk"
         },
         {
-            "protocol": "http",
+            "protocol": "socks",
             "settings": {
                 "servers": [
                     {
-                        "address": "res.proxy-seller.com",
-                        "port": 10000,
+                        "address": "geo.iproyal.com",
+                        "port": 32325,
                         "users": [
                             {
-                                "user": "83d7f198281996a1",
-                                "pass": "RNW78Fm5"
+                                "user": "5CtvDsKoWjmbkwu9",
+                                "pass": "8k1mtGDW4rPd8vXb_country-us"
                             }
                         ]
                     }
