@@ -26,6 +26,10 @@
                     {
                         "email": "3@123.com",
                         "id": "1a92a59b-e345-43c5-b822-87bb4ac7b51c"
+                    },
+                    {
+                        "email": "4@123.com",
+                        "id": "230b1e45-d129-4bb9-b613-8d7e960a57c2"
                     }
                 ]
             },
@@ -74,6 +78,25 @@
                 ]
             },
             "tag": "transit-hk"
+        },
+        {
+            "protocol": "socks",
+            "settings": {
+                "servers": [
+                    {
+                        "address": "res.proxy-seller.com",
+                        "port": 10000,
+                        "users": [
+                            {
+                                "user": "83d7f198281996a1",
+                                "pass": "RNW78Fm5",
+                                "level": 0
+                            }
+                        ]
+                    }
+                ]
+            },
+            "tag": "transit-resident"
         }
     ],
     "routing": {
@@ -122,6 +145,13 @@
                     "3@123.com"
                 ],
                 "outboundTag": "transit-hk"
+            },
+            {
+                "type": "field",
+                "user": [
+                    "4@123.com"
+                ],
+                "outboundTag": "transit-resident"
             }
         ]
     }

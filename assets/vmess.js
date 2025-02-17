@@ -127,13 +127,11 @@ let vmess_tcp_tls_servers = [
         "name": "！美国",
         "uid": "1a92a59b-e345-43c5-b822-87bb4ac7b51c"
     },
-
-    // 8
     {
         "domain": "ukns.uk",
-        "host": "8",
-        "name": "备用",
-        "uid": "ce57d713-c4f6-44bb-a59d-737a6080bb93"
+        "host": "0",
+        "name": "家宽",
+        "uid": "230b1e45-d129-4bb9-b613-8d7e960a57c2"
     },
 
     // 3
