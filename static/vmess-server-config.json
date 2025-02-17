@@ -80,7 +80,7 @@
             "tag": "transit-hk"
         },
         {
-            "protocol": "socks",
+            "protocol": "http",
             "settings": {
                 "servers": [
                     {
@@ -89,8 +89,7 @@
                         "users": [
                             {
                                 "user": "83d7f198281996a1",
-                                "pass": "RNW78Fm5",
-                                "level": 0
+                                "pass": "RNW78Fm5"
                             }
                         ]
                     }
