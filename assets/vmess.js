@@ -118,13 +118,7 @@ let vmess_tcp_tls_servers = [
     {
         "domain": "ukns.uk",
         "host": "0",
-        "name": "美国-亚利桑那州-梅萨",
-        "uid": "b63e5bf6-cfc9-4b47-a07d-cd8be0f63a70"
-    },
-    {
-        "domain": "ukns.uk",
-        "host": "0",
-        "name": "！美国",
+        "name": "香港落地",
         "uid": "1a92a59b-e345-43c5-b822-87bb4ac7b51c"
     },
     {
@@ -203,7 +197,7 @@ for (let i = 0; i < vmess_tcp_tls_servers.length; i++) {
     // console.log(JSON.stringify(obj))
 
     console.log(protocol + btoa(toBinaryStr(JSON.stringify(obj))));
-    if (i == 4) {
+    if (i == 3) {
         console.log('\n\n\n\n\n');
     }
 
