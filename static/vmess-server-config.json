@@ -22,10 +22,6 @@
                     {
                         "email": "2@123.com",
                         "id": "b63e5bf6-cfc9-4b47-a07d-cd8be0f63a70"
-                    },
-                    {
-                        "email": "3@123.com",
-                        "id": "1a92a59b-e345-43c5-b822-87bb4ac7b51c"
                     }
                 ]
             },
@@ -55,24 +51,6 @@
                 ]
             },
             "tag": "transit-hk"
-        },
-        {
-            "protocol": "socks",
-            "settings": {
-                "servers": [
-                    {
-                        "address": "geo.iproyal.com",
-                        "port": 32325,
-                        "users": [
-                            {
-                                "user": "5CtvDsKoWjmbkwu9",
-                                "pass": "8k1mtGDW4rPd8vXb_country-us_city-sanjose_session-U2R6ldnu_lifetime-168h_streaming-1"
-                            }
-                        ]
-                    }
-                ]
-            },
-            "tag": "transit-resident"
         }
     ],
     "routing": {
@@ -83,13 +61,8 @@
                     "0@123.com"
                 ],
                 "domain": [
-                    "domain:ultramobile.com",
-                    "domain:chatgpt.com",
-                    "domain:openai.com",
-                    "domain:paypal.com",
-                    "full:gemini.google.com"
                 ],
-                "outboundTag": "transit-socks"
+                "outboundTag": "direct"
             },
             {
                 "type": "field",
@@ -112,13 +85,6 @@
                 "type": "field",
                 "user": [
                     "2@123.com"
-                ],
-                "outboundTag": "transit-resident"
-            },
-            {
-                "type": "field",
-                "user": [
-                    "3@123.com"
                 ],
                 "outboundTag": "transit-hk"
             }

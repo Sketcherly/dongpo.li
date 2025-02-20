@@ -106,12 +106,6 @@ let vmess_tcp_tls_servers = [
     {
         "domain": "ukns.uk",
         "host": "0",
-        "name": "规则",
-        "uid": "7778bc68-9df0-4891-84c5-696de94c8531"
-    },
-    {
-        "domain": "ukns.uk",
-        "host": "0",
         "name": "直连",
         "uid": "ce57d713-c4f6-44bb-a59d-737a6080bb93"
     },
@@ -121,12 +115,7 @@ let vmess_tcp_tls_servers = [
         "name": "香港落地",
         "uid": "1a92a59b-e345-43c5-b822-87bb4ac7b51c"
     },
-    {
-        "domain": "ukns.uk",
-        "host": "0",
-        "name": "家宽",
-        "uid": "230b1e45-d129-4bb9-b613-8d7e960a57c2"
-    },
+
 
     // 3
     {
@@ -197,7 +186,7 @@ for (let i = 0; i < vmess_tcp_tls_servers.length; i++) {
     // console.log(JSON.stringify(obj))
 
     console.log(protocol + btoa(toBinaryStr(JSON.stringify(obj))));
-    if (i == 3) {
+    if (i == 1) {
         console.log('\n\n\n\n\n');
     }
 
