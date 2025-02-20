@@ -113,7 +113,7 @@ let vmess_tcp_tls_servers = [
         "domain": "ukns.uk",
         "host": "0",
         "name": "香港落地",
-        "uid": "1a92a59b-e345-43c5-b822-87bb4ac7b51c"
+        "uid": "b63e5bf6-cfc9-4b47-a07d-cd8be0f63a70"
     },
 
 
