@@ -7,7 +7,7 @@
     "inbounds": [
         {
             "protocol": "vmess",
-            "listen": "127.0.0.1",
+            "listen": "@@v2ray.sock",
             "port": 12345,
             "settings": {
                 "clients": [
