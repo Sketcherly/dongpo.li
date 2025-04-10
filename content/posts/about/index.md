@@ -11,6 +11,15 @@ draft: false
 <!-- Shortcodes -->
 <style>
 
+    :root {
+        --content-gap: 8px;
+        --theme: #FFFFFF;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
     header.header {
         display: none;
     }
@@ -19,6 +28,29 @@ draft: false
     }
     .footer {
         display: none;
+    }
+    :-webkit-any(article, aside, nav, section) h1 {
+        font-size: 32px;
+        margin-block-start: 20px;
+        margin-block-end: 16px;
+    }
+    :-webkit-any(article, aside, nav, section) h2 {
+        font-size: 28px;
+        margin-block-start: 16px;
+        margin-block-end: 12px;
+    }
+    :-webkit-any(article, aside, nav, section) h3 {
+        font-size: 24px;
+        margin-block-start: 12px;
+        margin-block-end: 8px;
+    }
+    :-webkit-any(article, aside, nav, section) h4 {
+        font-size: 16px;
+        margin-block-start: 12px;
+        margin-block-end: 8px;
+    }
+    .post-content li {
+        margin-top: 0;
     }
 
 </style>
@@ -43,8 +75,6 @@ draft: false
 
 # 专业技能
 7年多的Java后端开发经验。熟悉各种主流开发框架，熟悉高并发和分布式开发，熟练掌握常用的数据结构，熟悉常用的设计模式和开发规范。擅长分布式服务的服务端的问题解决。
-
-
 - **后端开发:** Java基础扎实, 熟练掌握Spring, Spring Boot, Spring Cloud, Hibernate, MyBatis, Dubbo等开源组件, 可以编写简单的spring-boot-starter方便组件使用
 - **数据库:** MySQL, Redis, Elasticsearch
 - **开源中间件:** RocketMQ,熟悉消息中间件的工作原理
