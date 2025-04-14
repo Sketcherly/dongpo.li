@@ -157,7 +157,7 @@ tar -zcvf ${BACKUP_DATE}.tar.gz bwdata && cp ${BACKUP_DATE}.tar.gz /data/backup/
 
 # 恢复
 
-1、新建个虚拟机  CPU、内存、硬盘、IP，修改shiq
+1、新建个虚拟机  CPU、内存、硬盘、IP，修改时区
 ```
 cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
 ```
