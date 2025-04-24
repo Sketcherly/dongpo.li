@@ -36,6 +36,25 @@
             "tag": "direct"
         },
         {
+            "protocol": "socks",
+            "settings": {
+                "servers": [
+                    {
+                        "address": "103.210.12.175",
+                        "port": 6103,
+                        "users": [
+                            {
+                                "user": "emxppqnn",
+                                "pass": "2fbtq7jpzywu",
+                                "level": 0
+                            }
+                        ]
+                    }
+                ]
+            },
+            "tag": "transit-webshare"
+        },
+        {
             "protocol": "vmess",
             "settings": {
                 "vnext": [
@@ -61,8 +80,9 @@
                     "0@123.com"
                 ],
                 "domain": [
+                    "domain:redotpay.com"
                 ],
-                "outboundTag": "direct"
+                "outboundTag": "transit-hk"
             },
             {
                 "type": "field",
@@ -70,9 +90,18 @@
                     "0@123.com"
                 ],
                 "domain": [
-                    "domain:redotpay.com"
+                    "domain:ultramobile.com"
                 ],
-                "outboundTag": "transit-hk"
+                "outboundTag": "transit-webshare"
+            },
+            {
+                "type": "field",
+                "user": [
+                    "0@123.com"
+                ],
+                "domain": [
+                ],
+                "outboundTag": "direct"
             },
             {
                 "type": "field",

@@ -106,6 +106,12 @@ let vmess_tcp_tls_servers = [
     {
         "domain": "ukns.uk",
         "host": "0",
+        "name": "规则",
+        "uid": "7778bc68-9df0-4891-84c5-696de94c8531"
+    },
+    {
+        "domain": "ukns.uk",
+        "host": "0",
         "name": "直连",
         "uid": "ce57d713-c4f6-44bb-a59d-737a6080bb93"
     },
@@ -117,20 +123,20 @@ let vmess_tcp_tls_servers = [
     },
 
 
-    // 3
-    {
-        "domain": "ukns.uk",
-        "host": "3",
-        "name": "洛杉矶-BWH-将过期-直连",
-        "uid": "ce57d713-c4f6-44bb-a59d-737a6080bb93"
-    },
+    // // 3
+    // {
+    //     "domain": "ukns.uk",
+    //     "host": "3",
+    //     "name": "洛杉矶-BWH-将过期-直连",
+    //     "uid": "ce57d713-c4f6-44bb-a59d-737a6080bb93"
+    // },
 
-    // 4
-    {
-        "domain": "ukns.uk",
-        "host": "4",
-        "name": "大阪-BWH-直连"
-    },
+    // // 4
+    // {
+    //     "domain": "ukns.uk",
+    //     "host": "4",
+    //     "name": "大阪-BWH-直连"
+    // },
 
     // // 5
     // {
@@ -186,9 +192,9 @@ for (let i = 0; i < vmess_tcp_tls_servers.length; i++) {
     // console.log(JSON.stringify(obj))
 
     console.log(protocol + btoa(toBinaryStr(JSON.stringify(obj))));
-    if (i == 1) {
-        console.log('\n\n\n\n\n');
-    }
+    // if (i == 1) {
+    //     console.log('\n\n\n\n\n');
+    // }
 
     // responseBody += protocol + btoa(toBinaryStr(JSON.stringify(obj))) + '\n';
 }
