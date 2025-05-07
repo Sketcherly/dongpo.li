@@ -106,30 +106,30 @@ let vmess_tcp_tls_servers = [
     {
         "domain": "ukns.uk",
         "host": "0",
-        "name": "规则",
+        "name": "美东->规则",
         "uid": "7778bc68-9df0-4891-84c5-696de94c8531"
     },
     {
         "domain": "ukns.uk",
         "host": "0",
-        "name": "直连",
+        "name": "美东->直连",
         "uid": "ce57d713-c4f6-44bb-a59d-737a6080bb93"
     },
     {
         "domain": "ukns.uk",
         "host": "0",
-        "name": "香港落地",
+        "name": "美东->香港",
         "uid": "b63e5bf6-cfc9-4b47-a07d-cd8be0f63a70"
     },
 
 
-    // // 3
-    // {
-    //     "domain": "ukns.uk",
-    //     "host": "3",
-    //     "name": "洛杉矶-BWH-将过期-直连",
-    //     "uid": "ce57d713-c4f6-44bb-a59d-737a6080bb93"
-    // },
+    // 8
+    {
+        "domain": "ukns.uk",
+        "host": "8",
+        "name": "香港->直连",
+        "uid": "ce57d713-c4f6-44bb-a59d-737a6080bb93"
+    },
 
     // // 4
     // {
@@ -138,39 +138,6 @@ let vmess_tcp_tls_servers = [
     //     "name": "大阪-BWH-直连"
     // },
 
-    // // 5
-    // {
-    //     "domain": "ukns.uk",
-    //     "host": "5",
-    //     "name": "洛杉矶-DMIT-主-直连",
-    //     "uid": "ce57d713-c4f6-44bb-a59d-737a6080bb93"
-    // },
-    // {
-    //     "domain": "ukns.uk",
-    //     "host": "5",
-    //     "name": "洛杉矶-DMIT-主-落地(亚利桑那-梅萨)",
-    //     "uid": "b63e5bf6-cfc9-4b47-a07d-cd8be0f63a70"
-    // },
-    // {
-    //     "domain": "ukns.uk",
-    //     "host": "5",
-    //     "name": "洛杉矶-DMIT-主-落地(香港)",
-    //     "uid": "1a92a59b-e345-43c5-b822-87bb4ac7b51c"
-    // },
-
-    // // 6
-    // {
-    //     "domain": "ukns.uk",
-    //     "host": "6",
-    //     "name": "洛杉矶-DMIT-将过期-直连",
-    //     "uid": "ce57d713-c4f6-44bb-a59d-737a6080bb93"
-    // },
-    // {
-    //     "domain": "ukns.uk",
-    //     "host": "6",
-    //     "name": "洛杉矶-DMIT-将过期-落地(亚利桑那-梅萨)",
-    //     "uid": "b63e5bf6-cfc9-4b47-a07d-cd8be0f63a70"
-    // }
 ];
 
 for (let i = 0; i < vmess_tcp_tls_servers.length; i++) {
