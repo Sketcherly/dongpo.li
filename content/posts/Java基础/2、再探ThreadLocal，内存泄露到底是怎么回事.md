@@ -1,6 +1,6 @@
 ---
 title: "再探ThreadLocal，内存泄露到底是怎么回事"
-date: 2024-12-02T02:10:40+08:00
+date: 2025-05-08T14:20:40+08:00
 draft: false
 summary: '又一次背八股，又是ThreadLocal'
 ---
