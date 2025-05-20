@@ -30,7 +30,7 @@ dd if=/dev/zero of=500MB.tar.gz count=5 bs=100M
 dd if=/dev/zero of=1000MB.tar.gz count=10 bs=100M
 
 bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)
-curl 'https://dongpo.li/vmess-server-config.json' -o /usr/local/etc/v2ray/config.json
+curl 'https://dongpo.li/trojan-server-config.json' -o /usr/local/etc/v2ray/config.json
 systemctl enable v2ray
 systemctl restart v2ray
 
