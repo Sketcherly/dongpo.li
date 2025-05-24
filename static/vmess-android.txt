@@ -1,4 +1,4 @@
 trojan://7778bc68-9df0-4891-84c5-696de94c8531@0.ukns.uk:443?headerType=tcp&sni=0.ukns.uk&type=tcp#%E7%BE%8E%E8%A5%BF-%3E%E8%A7%84%E5%88%99
 trojan://ce57d713-c4f6-44bb-a59d-737a6080bb93@0.ukns.uk:443?headerType=tcp&sni=0.ukns.uk&type=tcp#%E7%BE%8E%E8%A5%BF-%3E%E7%9B%B4%E8%BF%9E
 trojan://b63e5bf6-cfc9-4b47-a07d-cd8be0f63a70@0.ukns.uk:443?headerType=tcp&sni=0.ukns.uk&type=tcp#%E7%BE%8E%E8%A5%BF-%3E%E9%A6%99%E6%B8%AF
-trojan://7778bc68-9df0-4891-84c5-696de94c8531@0.ukns.uk:443?headerType=tcp&sni=0.ukns.uk&type=tcp#%E9%A6%99%E6%B8%AF-%3E%E7%9B%B4%E8%BF%9E
+trojan://7778bc68-9df0-4891-84c5-696de94c8531@8.ukns.uk:443?headerType=tcp&sni=0.ukns.uk&type=tcp#%E9%A6%99%E6%B8%AF-%3E%E7%9B%B4%E8%BF%9E
