@@ -83,7 +83,8 @@
                     "0@v2fly.org"
                 ],
                 "domain": [
-                    "domain:redotpay.com"
+                    "domain:redotpay.com",
+                    "domain:infini.money"
                 ],
                 "outboundTag": "transit-hk"
             },
@@ -93,8 +94,7 @@
                     "0@v2fly.org"
                 ],
                 "domain": [
-                    "domain:ultramobile.com",
-                    "domain:infini.money"
+                    "domain:ultramobile.com"
                 ],
                 "outboundTag": "transit-hk"
             },
