@@ -80,7 +80,8 @@
                     "0@123.com"
                 ],
                 "domain": [
-                    "domain:redotpay.com"
+                    "domain:redotpay.com",
+                    "domain:infini.money"
                 ],
                 "outboundTag": "transit-hk"
             },
