@@ -93,7 +93,8 @@
                     "0@v2fly.org"
                 ],
                 "domain": [
-                    "domain:ultramobile.com"
+                    "domain:ultramobile.com",
+                    "domain:infini.money"
                 ],
                 "outboundTag": "transit-hk"
             },
