@@ -60,19 +60,19 @@
             "tag": "transit-hk"
         },
         {
-            "protocol": "trojan",
+            "protocol": "shadowsocks",
             "settings": {
                 "servers": [
                     {
-                        "address": "38.49.57.199",
-                        "port": 12345,
-                        "password": "ce57d713-c4f6-44bb-a59d-737a6080bb93",
-                        "email": "1@v2fly.org",
+                        "address": "atthome.388898.xyz",
+                        "port": 30002,
+                        "method": "aes-256-gcm",
+                        "password": "403467de-a21d-42cb-ad99-3ccb651da1bc",
                         "level": 0
                     }
                 ]
             },
-            "tag": "transit-la"
+            "tag": "transit-isp"
         }
     ],
     "routing": {
@@ -94,9 +94,19 @@
                     "0@v2fly.org"
                 ],
                 "domain": [
+                    "domain:www.gstatic.com"
+                ],
+                "outboundTag": "direct"
+            },
+            {
+                "type": "field",
+                "user": [
+                    "0@v2fly.org"
+                ],
+                "domain": [
                     "domain:ultramobile.com"
                 ],
-                "outboundTag": "transit-hk"
+                "outboundTag": "transit-isp"
             },
             {
                 "type": "field",
@@ -104,7 +114,7 @@
                     "0@v2fly.org"
                 ],
                 "domain": [],
-                "outboundTag": "transit-la"
+                "outboundTag": "transit-isp"
             },
             {
                 "type": "field",
