@@ -94,16 +94,6 @@
                     "0@v2fly.org"
                 ],
                 "domain": [
-                    "domain:www.gstatic.com"
-                ],
-                "outboundTag": "direct"
-            },
-            {
-                "type": "field",
-                "user": [
-                    "0@v2fly.org"
-                ],
-                "domain": [
                     "domain:ultramobile.com"
                 ],
                 "outboundTag": "transit-isp"
