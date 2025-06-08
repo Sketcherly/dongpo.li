@@ -69,14 +69,14 @@
                         "users": [
                             {
                                 "user": "5CtvDsKoWjmbkwu9",
-                                "pass": "8k1mtGDW4rPd8vXb_country-de,gb_city-berlin",
+                                "pass": "8k1mtGDW4rPd8vXb_country-de,gb_city-berlin_session-UVgC5dCL_lifetime-168h",
                                 "level": 0
                             }
                         ]
                     }
                 ]
             },
-            "tag": "transit-uk"
+            "tag": "transit-de"
         },
         {
             "protocol": "shadowsocks",
