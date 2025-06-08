@@ -60,6 +60,25 @@
             "tag": "transit-hk"
         },
         {
+            "protocol": "socks",
+            "settings": {
+                "servers": [
+                    {
+                        "address": "geo.iproyal.com",
+                        "port": 12321,
+                        "users": [
+                            {
+                                "user": "5CtvDsKoWjmbkwu9",
+                                "pass": "8k1mtGDW4rPd8vXb_country-gb_city-grimsby",
+                                "level": 0
+                            }
+                        ]
+                    }
+                ]
+            },
+            "tag": "transit-uk"
+        },
+        {
             "protocol": "shadowsocks",
             "settings": {
                 "servers": [
@@ -97,6 +116,16 @@
                     "domain:ultramobile.com"
                 ],
                 "outboundTag": "transit-isp"
+            },
+            {
+                "type": "field",
+                "user": [
+                    "0@v2fly.org"
+                ],
+                "domain": [
+                    "domain:bybit.com"
+                ],
+                "outboundTag": "transit-uk"
             },
             {
                 "type": "field",
