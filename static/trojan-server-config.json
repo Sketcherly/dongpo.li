@@ -69,7 +69,7 @@
                         "users": [
                             {
                                 "user": "5CtvDsKoWjmbkwu9",
-                                "pass": "8k1mtGDW4rPd8vXb_country-gb_city-grimsby",
+                                "pass": "8k1mtGDW4rPd8vXb_country-de,gb_city-berlin",
                                 "level": 0
                             }
                         ]
@@ -125,7 +125,7 @@
                 "domain": [
                     "domain:bybit.com"
                 ],
-                "outboundTag": "transit-uk"
+                "outboundTag": "transit-de"
             },
             {
                 "type": "field",
