@@ -123,7 +123,8 @@
                     "0@v2fly.org"
                 ],
                 "domain": [
-                    "domain:bybit.com"
+                    "domain:bybit.com",
+                    "domain:bybit.biz"
                 ],
                 "outboundTag": "transit-de"
             },
