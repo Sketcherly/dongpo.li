@@ -79,6 +79,25 @@
             "tag": "transit-de"
         },
         {
+            "protocol": "socks",
+            "settings": {
+                "servers": [
+                    {
+                        "address": "12.4.136.33",
+                        "port": 2315,
+                        "users": [
+                            {
+                                "user": "QnmTjbJQ8T",
+                                "pass": "1DG4KPPq6a",
+                                "level": 0
+                            }
+                        ]
+                    }
+                ]
+            },
+            "tag": "transit-static-isp"
+        },
+        {
             "protocol": "shadowsocks",
             "settings": {
                 "servers": [
@@ -115,7 +134,7 @@
                 "domain": [
                     "domain:ultramobile.com"
                 ],
-                "outboundTag": "transit-isp"
+                "outboundTag": "transit-static-isp"
             },
             {
                 "type": "field",
@@ -134,7 +153,7 @@
                     "0@v2fly.org"
                 ],
                 "domain": [],
-                "outboundTag": "transit-isp"
+                "outboundTag": "transit-static-isp"
             },
             {
                 "type": "field",
