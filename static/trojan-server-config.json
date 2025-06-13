@@ -132,9 +132,9 @@
                     "0@v2fly.org"
                 ],
                 "domain": [
-                    "domain:ultramobile.com"
+                    "domain:youtube.com"
                 ],
-                "outboundTag": "transit-static-isp"
+                "outboundTag": "direct"
             },
             {
                 "type": "field",
