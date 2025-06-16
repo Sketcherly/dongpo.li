@@ -96,21 +96,6 @@
                 ]
             },
             "tag": "transit-static-isp"
-        },
-        {
-            "protocol": "shadowsocks",
-            "settings": {
-                "servers": [
-                    {
-                        "address": "atthome.388898.xyz",
-                        "port": 30002,
-                        "method": "aes-256-gcm",
-                        "password": "403467de-a21d-42cb-ad99-3ccb651da1bc",
-                        "level": 0
-                    }
-                ]
-            },
-            "tag": "transit-isp"
         }
     ],
     "routing": {
